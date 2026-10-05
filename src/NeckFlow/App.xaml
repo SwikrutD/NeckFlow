@@ -1,0 +1,12 @@
+<Application x:Class="NeckFlow.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ShutdownMode="OnExplicitShutdown">
+  <Application.Resources>
+    <SolidColorBrush x:Key="AccentBrush" Color="#5B8DEF"/>
+    <SolidColorBrush x:Key="PanelBrush" Color="#F7F8FC"/>
+      <SolidColorBrush x:Key="WindowBg" Color="#F7F8FC"/>
+    <SolidColorBrush x:Key="TextBrush" Color="#24324A"/>
+    <SolidColorBrush x:Key="MutedBrush" Color="#65738A"/>
+    <SolidColorBrush x:Key="HoverBg" Color="#E8EDF6"/>
+    <SolidColorBrush x:Key="LineBrush" Color="#E1E6F0"/>
+    <SolidColorBrush x:Key="InputBg" Color="#FFFFFF"/>
+  </Application.Resources>
+</Application>

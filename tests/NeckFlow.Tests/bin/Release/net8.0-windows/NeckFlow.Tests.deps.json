@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "NeckFlow.Tests/1.0.0": {
+        "dependencies": {
+          "NeckFlow": "1.0.0"
+        },
+        "runtime": {
+          "NeckFlow.Tests.dll": {}
+        }
+      },
+      "NeckFlow/1.0.0": {
+        "runtime": {
+          "NeckFlow.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NeckFlow.Tests/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NeckFlow/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

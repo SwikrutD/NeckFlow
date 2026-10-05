@@ -1,0 +1,5 @@
+H:\Tools\NeckFlow\publish\win-x64\NeckFlow.exe
+H:\Tools\NeckFlow\publish\win-x64\NeckFlow.dll
+H:\Tools\NeckFlow\publish\win-x64\NeckFlow.deps.json
+H:\Tools\NeckFlow\publish\win-x64\NeckFlow.runtimeconfig.json
+H:\Tools\NeckFlow\publish\win-x64\NeckFlow.pdb

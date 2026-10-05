@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NeckFlow Animations</title>
+<style>
+  :root { --bg: #eef2f8; --card: #ffffff; --ink: #17243a; --muted: #5d6b82; --hot: #c2412d; --line: #d8e0ee; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #141a24; --card: #1f2633; --ink: #eef2f8; --muted: #a3afc2; --hot: #ff8a75; --line: #313b4d; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 28px 16px 40px; background: var(--bg); color: var(--ink); font: 14px/1.5 "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 1180px; margin: 0 auto; }
+  h1 { margin: 0 0 4px; font-size: 24px; }
+  p.lead { margin: 0 0 22px; color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 18px; }
+  figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  video { display: block; width: 100%; aspect-ratio: 720 / 420; background: #dfe7f3; }
+  figcaption { padding: 12px 14px 14px; }
+  figcaption b { display: block; font-size: 16px; }
+  figcaption span { color: var(--hot); font-weight: 600; font-size: 13px; }
+  figcaption small { display: block; color: var(--muted); margin-top: 4px; }
+  .icons { display: flex; gap: 18px; align-items: flex-end; flex-wrap: wrap; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; margin-top: 18px; }
+  .icons div { text-align: center; color: var(--muted); font-size: 12px; }
+  .icons img { display: block; margin: 0 auto 6px; image-rendering: pixelated; }
+</style>
+</head>
+<body>
+<main>
+  <h1>NeckFlow exercise animations</h1>
+  <p class="lead">Rendered offscreen from the same 3D scene the popup uses. Red marks the muscles being worked; cyan arrows show the direction of movement. Regenerate with <code>animations\render.ps1</code>.</p>
+  <div class="grid">
+    <figure><video src="ChinTuck.mp4" autoplay loop muted playsinline controls></video><figcaption><b>Chin Tuck</b><span>Deep neck flexors · suboccipitals</span><small>Head glides straight back and holds, eyes level.</small></figcaption></figure>
+    <figure><video src="LookLeftRight.mp4" autoplay loop muted playsinline controls></video><figcaption><b>Look Left / Right</b><span>Sternocleidomastoid</span><small>The working side lights up as the head turns.</small></figcaption></figure>
+    <figure><video src="SideTilt.mp4" autoplay loop muted playsinline controls></video><figcaption><b>Side Tilt</b><span>Upper trapezius · scalenes</span><small>The stretched side lights up; shoulders stay down.</small></figcaption></figure>
+    <figure><video src="ShoulderRolls.mp4" autoplay loop muted playsinline controls></video><figcaption><b>Shoulder Rolls</b><span>Upper trapezius · levator scapulae</span><small>Up, back, down, forward; glow peaks at the top of each roll.</small></figcaption></figure>
+    <figure><video src="ShoulderBladeSqueeze.mp4" autoplay loop muted playsinline controls></video><figcaption><b>Shoulder Blade Squeeze</b><span>Rhomboids · middle trapezius</span><small>Viewed from behind; blades draw in and down.</small></figcaption></figure>
+  </div>
+  <div class="icons">
+    <div><img src="tray-icon/tray-icon-16.png" width="16" height="16" alt="">16 px</div>
+    <div><img src="tray-icon/tray-icon-24.png" width="24" height="24" alt="">24 px</div>
+    <div><img src="tray-icon/tray-icon-32.png" width="32" height="32" alt="">32 px</div>
+    <div><img src="tray-icon/tray-icon-64.png" width="64" height="64" alt="">64 px</div>
+    <div><img src="tray-icon/tray-icon-256.png" width="128" height="128" alt="" style="image-rendering:auto">256 px</div>
+  </div>
+</main>
+</body>
+</html>

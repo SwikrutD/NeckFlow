@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "NeckFlow/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/NeckFlow.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NeckFlow.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "NeckFlow/1.0.0": {
+      "type": "project",
+      "path": "../../src/NeckFlow/NeckFlow.csproj",
+      "msbuildProject": "../../src/NeckFlow/NeckFlow.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "NeckFlow >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "H:\\Tools\\NeckFlow\\.dotnet-home\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "H:\\Tools\\NeckFlow\\tests\\NeckFlow.Tests\\NeckFlow.Tests.csproj",
+      "projectName": "NeckFlow.Tests",
+      "projectPath": "H:\\Tools\\NeckFlow\\tests\\NeckFlow.Tests\\NeckFlow.Tests.csproj",
+      "packagesPath": "H:\\Tools\\NeckFlow\\.dotnet-home\\.nuget\\packages\\",
+      "outputPath": "H:\\Tools\\NeckFlow\\tests\\NeckFlow.Tests\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Swikrut\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "H:\\Tools\\NeckFlow\\src\\NeckFlow\\NeckFlow.csproj": {
+              "projectPath": "H:\\Tools\\NeckFlow\\src\\NeckFlow\\NeckFlow.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.425/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

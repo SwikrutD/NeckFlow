@@ -1,0 +1,54 @@
+<Window x:Class="NeckFlow.Views.ExercisePopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NeckFlow Exercise" WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent" ShowInTaskbar="False" Topmost="True"
+        Width="420" Height="548" ResizeMode="NoResize" KeyDown="OnKeyDown"
+        WindowStartupLocation="Manual" UseLayoutRounding="True" SnapsToDevicePixels="True">
+  <Window.Resources>
+    <Style TargetType="Button">
+      <Setter Property="Foreground" Value="#24324A"/><Setter Property="Background" Value="#EEF2F9"/>
+      <Setter Property="BorderBrush" Value="#D7DFED"/><Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="FontSize" Value="13"/><Setter Property="FontWeight" Value="SemiBold"/>
+      <Setter Property="Padding" Value="16,9"/><Setter Property="Margin" Value="4,0"/>
+      <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Button">
+        <Border x:Name="ButtonBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="9" Padding="{TemplateBinding Padding}">
+          <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+        <ControlTemplate.Triggers><Trigger Property="IsMouseOver" Value="True"><Setter TargetName="ButtonBorder" Property="Opacity" Value="0.82"/></Trigger><Trigger Property="IsPressed" Value="True"><Setter TargetName="ButtonBorder" Property="Opacity" Value="0.65"/></Trigger><Trigger Property="IsEnabled" Value="False"><Setter TargetName="ButtonBorder" Property="Opacity" Value="0.45"/></Trigger></ControlTemplate.Triggers>
+      </ControlTemplate></Setter.Value></Setter>
+    </Style>
+  </Window.Resources>
+  <Border x:Name="PopupCard" CornerRadius="18" Background="#F8FAFF" BorderBrush="#D8E0F0" BorderThickness="1" Padding="18" SnapsToDevicePixels="True">
+    <Border.Effect><DropShadowEffect Color="#25344F" BlurRadius="24" ShadowDepth="8" Direction="270" Opacity="0.22"/></Border.Effect>
+    <Border.RenderTransform><TranslateTransform x:Name="EntryShift" X="16" Y="16"/></Border.RenderTransform>
+    <Grid>
+      <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="222"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+      <DockPanel LastChildFill="False" Margin="0,0,0,2">
+        <TextBlock x:Name="BrandText" Text="NeckFlow" FontSize="16" FontWeight="SemiBold" Foreground="#24324A" VerticalAlignment="Center"/>
+        <Button x:Name="CloseButton" DockPanel.Dock="Right" Content="×" Click="CloseClick" Width="30" Height="30" Padding="0" FontSize="19" Background="Transparent" BorderThickness="0" AutomationProperties.Name="Close exercise"/>
+      </DockPanel>
+      <Border x:Name="Stage" Grid.Row="1" Margin="0,6,0,10" CornerRadius="12" ClipToBounds="True" Cursor="SizeWE" ToolTip="Drag to rotate · double-click to reset"
+              MouseLeftButtonDown="StageMouseDown" MouseMove="StageMouseMove" MouseLeftButtonUp="StageMouseUp">
+        <Viewport3D x:Name="Viewport" ClipToBounds="True"/>
+      </Border>
+      <StackPanel Grid.Row="2" Margin="2,0">
+        <DockPanel LastChildFill="False"><TextBlock x:Name="ExerciseTitle" Text="Chin Tuck" FontSize="21" FontWeight="Bold" Foreground="#17243A"/><TextBlock x:Name="ExerciseProgress" DockPanel.Dock="Right" Text="Exercise 1 of 5" FontSize="12" Foreground="#65738A" VerticalAlignment="Bottom" Margin="10,0,0,3"/></DockPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,3,0,0">
+          <Ellipse Width="8" Height="8" Fill="#FF4A33" VerticalAlignment="Center" Margin="0,1,6,0"/>
+          <TextBlock x:Name="TargetsText" FontSize="12" FontWeight="SemiBold" Foreground="#C2412D"/>
+        </StackPanel>
+        <TextBlock x:Name="Instructions" TextWrapping="Wrap" Margin="0,5,0,0" Foreground="#526074" FontSize="13" LineHeight="19"/>
+      </StackPanel>
+      <TextBlock Grid.Row="3" x:Name="TimerText" Text="00:20" Width="112" TextAlignment="Center" FontSize="40" FontWeight="Bold" Foreground="#17243A" HorizontalAlignment="Center" Margin="0,12,0,10" FontFamily="Segoe UI"/>
+      <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,4">
+        <Button x:Name="PauseButton" Content="Pause" Click="PauseClick" AutomationProperties.Name="Pause exercise"/>
+        <Button x:Name="SkipButton" Content="Skip" Click="SkipClick" AutomationProperties.Name="Skip exercise"/>
+        <Button Content="Done" Click="DoneClick" Background="#2B63C0" Foreground="White" BorderBrush="#2B63C0" AutomationProperties.Name="Complete exercise"/>
+      </StackPanel>
+      <Grid x:Name="CompletionPanel" Grid.RowSpan="5" Background="#F8FAFF" Visibility="Collapsed">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"><TextBlock Text="✓" FontSize="44" Foreground="#2E7D5B" HorizontalAlignment="Center"/><TextBlock Text="Neck break complete" FontSize="20" FontWeight="SemiBold" Foreground="#17243A"/><TextBlock Text="Nice work. Keep moving comfortably." FontSize="13" Foreground="#526074" Margin="0,6,0,0"/></StackPanel>
+      </Grid>
+    </Grid>
+  </Border>
+</Window>
