@@ -9,6 +9,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>NeckFlow</AssemblyName>
     <RootNamespace>NeckFlow</RootNamespace>
+    <ApplicationIcon>..\..\animations\NeckFlow.ico</ApplicationIcon>
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
   </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\animations\tray-icon\tray-icon-32.png" LogicalName="NeckFlow.tray-icon-32.png" />
+  </ItemGroup>
 </Project>

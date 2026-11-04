@@ -1,5 +1,6 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 namespace NeckFlow.Rendering;
@@ -56,6 +57,16 @@ internal static class TrayIconArt
 
     public static Icon CreateIcon(int size)
     {
+        var resourceName = "NeckFlow.tray-icon-32.png";
+        using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName);
+        if (stream is not null)
+        {
+            using var resourceBitmap = new Bitmap(stream);
+            var resourceHandle = resourceBitmap.GetHicon();
+            try { using var source = Icon.FromHandle(resourceHandle); return (Icon)source.Clone(); }
+            finally { DestroyIcon(resourceHandle); }
+        }
+
         using var bitmap = Render(size);
         var handle = bitmap.GetHicon();
         try { using var source = Icon.FromHandle(handle); return (Icon)source.Clone(); }

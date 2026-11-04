@@ -64,7 +64,7 @@ public partial class ExercisePopup : Window
     {
         if (!dark) return;
         PopupCard.Background = new SolidColorBrush(MediaColor.FromRgb(31, 38, 51)); PopupCard.BorderBrush = new SolidColorBrush(MediaColor.FromRgb(62, 73, 94));
-        CompletionPanel.Background = PopupCard.Background; ExerciseTitle.Foreground = System.Windows.Media.Brushes.White; BrandText.Foreground = System.Windows.Media.Brushes.White; CloseButton.Foreground = System.Windows.Media.Brushes.White; TimerText.Foreground = System.Windows.Media.Brushes.White; Instructions.Foreground = new SolidColorBrush(MediaColor.FromRgb(194, 204, 220));
+        CompletionPanel.Background = PopupCard.Background; ExerciseTitle.Foreground = System.Windows.Media.Brushes.White; BrandText.Foreground = System.Windows.Media.Brushes.White; CloseButton.Foreground = System.Windows.Media.Brushes.White; TimerText.Foreground = System.Windows.Media.Brushes.White; CompletionTitle.Foreground = System.Windows.Media.Brushes.White; CompletionSubtitle.Foreground = new SolidColorBrush(MediaColor.FromRgb(194, 204, 220)); Instructions.Foreground = new SolidColorBrush(MediaColor.FromRgb(194, 204, 220));
         TargetsText.Foreground = new SolidColorBrush(MediaColor.FromRgb(255, 138, 117)); ExerciseProgress.Foreground = Instructions.Foreground;
         foreach (var b in new[] { PauseButton, SkipButton }) { b.Background = new SolidColorBrush(MediaColor.FromRgb(45, 55, 73)); b.BorderBrush = new SolidColorBrush(MediaColor.FromRgb(70, 83, 106)); b.Foreground = System.Windows.Media.Brushes.White; }
     }

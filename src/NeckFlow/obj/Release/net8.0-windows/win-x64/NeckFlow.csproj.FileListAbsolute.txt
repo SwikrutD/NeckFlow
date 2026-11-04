@@ -20,3 +20,4 @@ H:\Tools\NeckFlow\src\NeckFlow\obj\Release\net8.0-windows\win-x64\refint\NeckFlo
 H:\Tools\NeckFlow\src\NeckFlow\obj\Release\net8.0-windows\win-x64\NeckFlow.pdb
 H:\Tools\NeckFlow\src\NeckFlow\obj\Release\net8.0-windows\win-x64\NeckFlow.genruntimeconfig.cache
 H:\Tools\NeckFlow\src\NeckFlow\obj\Release\net8.0-windows\win-x64\ref\NeckFlow.dll
+H:\Tools\NeckFlow\src\NeckFlow\obj\Release\net8.0-windows\win-x64\NeckFlow.sourcelink.json

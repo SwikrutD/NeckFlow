@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NeckFlow")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9cc961a58ad31c4491499d2d9991f8951454fdcc")]
 [assembly: System.Reflection.AssemblyProductAttribute("NeckFlow")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NeckFlow")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,6 +15,14 @@ dotnet build -c Release
 dotnet run --project src/NeckFlow -c Release
 ```
 
+For a distributable Windows x64 build, publish the application to `publish\\win-x64`:
+
+```powershell
+.\\publish.ps1
+```
+
+The executable is `publish\\win-x64\\NeckFlow.exe`. The published executable embeds the NeckFlow icon from `animations\\tray-icon`.
+
 Settings are stored at `%LOCALAPPDATA%\\NeckFlow\\settings.json`; activity history is in `activity.json`. Startup uses the per-user `HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run` key and requires no administrator rights.
 
 ## Architecture

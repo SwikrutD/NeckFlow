@@ -47,7 +47,7 @@
         <Button Content="Done" Click="DoneClick" Background="#2B63C0" Foreground="White" BorderBrush="#2B63C0" AutomationProperties.Name="Complete exercise"/>
       </StackPanel>
       <Grid x:Name="CompletionPanel" Grid.RowSpan="5" Background="#F8FAFF" Visibility="Collapsed">
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"><TextBlock Text="✓" FontSize="44" Foreground="#2E7D5B" HorizontalAlignment="Center"/><TextBlock Text="Neck break complete" FontSize="20" FontWeight="SemiBold" Foreground="#17243A"/><TextBlock Text="Nice work. Keep moving comfortably." FontSize="13" Foreground="#526074" Margin="0,6,0,0"/></StackPanel>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"><TextBlock Text="✓" FontSize="44" Foreground="#2E7D5B" HorizontalAlignment="Center"/><TextBlock x:Name="CompletionTitle" Text="Exercise complete" FontSize="20" FontWeight="SemiBold" Foreground="#17243A"/><TextBlock x:Name="CompletionSubtitle" Text="Nice work. Keep moving comfortably." FontSize="13" Foreground="#526074" Margin="0,6,0,0"/></StackPanel>
       </Grid>
     </Grid>
   </Border>
